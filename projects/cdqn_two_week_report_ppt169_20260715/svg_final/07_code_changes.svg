@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC" />
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">代码改动集中在 7 个职责点</text>
+    <path fill="#DBEAFE" stroke="#2563EB" stroke-width="1" d="M64,96 H1216 A8,8 0 0 1 1224,104 V134 A8,8 0 0 1 1216,142 H64 A8,8 0 0 1 56,134 V104 A8,8 0 0 1 64,96 Z" />
+    <text x="82" y="126" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#0B1F3A">核心原则：保留 QMIX 原路径，新建 cascade_dqn 路径，先能公平对比，再决定是否替换。</text>
+  </g>
+  <g id="new-files">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M64,174 H596 A8,8 0 0 1 604,182 V466 A8,8 0 0 1 596,474 H64 A8,8 0 0 1 56,466 V182 A8,8 0 0 1 64,174 Z" />
+    
+  <g transform="translate(86.0, 204.0) scale(1.3333333333333333)" fill="none" stroke="#2563EB" stroke-width="2">
+    <path d="M5 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M5 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M15 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M7 8l0 8" />
+    <path d="M9 18h6a2 2 0 0 0 2 -2v-5" />
+    <path d="M14 14l3 -3l3 3" />
+  </g>
+    <text x="132" y="228" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">新增 CDQN 路径</text>
+    <text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="282">MARL/network/cascade_net.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="316">MARL/policy/cascade_dqn.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="350">MARL/common/transition_buffer.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="384">MARL/cascade_runner.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="418">tools/smoke_test.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="86" y="452">analyze_compare.py</text></g>
+  <g id="modified-files">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M684,174 H1216 A8,8 0 0 1 1224,182 V466 A8,8 0 0 1 1216,474 H684 A8,8 0 0 1 676,466 V182 A8,8 0 0 1 684,174 Z" />
+    
+  <g transform="translate(706.0, 204.0) scale(1.3333333333333333)" fill="none" stroke="#14B8A6" stroke-width="2">
+    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065" />
+    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+  </g>
+    <text x="752" y="228" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">修改原有入口与评估</text>
+    <text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="282">MARL/common/arguments.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="316">main.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="350">env/environment.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="384">MARL/runner.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="418">MARL/common/rollout.py</text><text font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827" x="706" y="452">README.md / AUDIT.md / PPT_STRUCTURE.md</text></g>
+  <g id="routing-code">
+    <path fill="#0B1F3A" d="M164,516 H1116 A8,8 0 0 1 1124,524 V614 A8,8 0 0 1 1116,622 H164 A8,8 0 0 1 156,614 V524 A8,8 0 0 1 164,516 Z" />
+    <text x="186" y="548" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">路由逻辑</text>
+    <text font-family="Consolas, Courier New, monospace" font-size="17" fill="#DBEAFE" x="186" y="586">if args.alg == "cascade_dqn": use CascadeRunner + transition replay</text><text font-family="Consolas, Courier New, monospace" font-size="17" fill="#DBEAFE" x="186" y="614">else: keep original Runner + episode replay + QMIX/VDN/other algorithms</text></g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Deliverable scope: additive implementation, no deletion of original QMIX path.</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">07 / 10</text>
+  </g>
+</svg>

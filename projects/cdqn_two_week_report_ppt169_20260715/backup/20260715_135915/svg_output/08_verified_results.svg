@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">本地小样验证通过，但不包装成最终性能结论</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">这里展示的是工程可运行性与数据管线验证；真正算法优劣需要服务器全量对比。</text>
+  </g>
+  <g id="kpi-1">
+    <rect x="56" y="166" width="270" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/shield-check" x="86" y="196" width="34" height="34" fill="#14B8A6" stroke-width="2"/>
+    <text x="86" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#14B8A6">0</text>
+    <text x="134" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">非法动作</text>
+    <text x="86" y="302" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#475569">150 步随机合法动作无 KeyError</text>
+  </g>
+  <g id="kpi-2">
+    <rect x="356" y="166" width="270" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/cpu" x="386" y="196" width="34" height="34" fill="#2563EB" stroke-width="2"/>
+    <text x="386" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#2563EB">900</text>
+    <text x="494" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">env steps</text>
+    <text x="386" y="302" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#475569">CDQN 端到端训练可运行</text>
+  </g>
+  <g id="kpi-3">
+    <rect x="656" y="166" width="270" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/chart-line" x="686" y="196" width="34" height="34" fill="#2563EB" stroke-width="2"/>
+    <text x="686" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="800" fill="#2563EB">0.028→0.017</text>
+    <text x="686" y="302" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#475569">小样 loss 下降，仅说明训练闭环正常</text>
+  </g>
+  <g id="kpi-4">
+    <rect x="956" y="166" width="268" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/list-check" x="986" y="196" width="34" height="34" fill="#14B8A6" stroke-width="2"/>
+    <text x="986" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#14B8A6">CSV</text>
+    <text x="1082" y="264" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">对齐</text>
+    <text x="986" y="302" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#475569">QMIX 与 CDQN 指标格式一致</text>
+  </g>
+  <g id="chart-review">
+    <rect x="96" y="392" width="1088" height="150" rx="8" fill="#FFE4E6" stroke="#E11D48" stroke-width="1.4"/>
+    <use data-icon="tabler-outline/alert-triangle" x="126" y="430" width="34" height="34" fill="#E11D48" stroke-width="2"/>
+    <text x="178" y="434" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">图表审查结论</text>
+    <text x="178" y="474" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827">
+      <tspan x="178" dy="0">已有 compare_curves.png 只有极少评估点，属于 smoke / sanity 产物。</tspan>
+      <tspan x="178" dy="32">本 PPT 不把它作为正式性能图展示；结果页保留可替换位置，等待服务器全量实验回填。</tspan>
+    </text>
+  </g>
+  <g id="commands">
+    <rect x="156" y="574" width="968" height="56" rx="8" fill="#0B1F3A"/>
+    <text x="186" y="609" font-family="Consolas, Courier New, monospace" font-size="17" fill="#DBEAFE">python main.py --alg cascade_dqn --reward_norm --cli_total_env_steps 900</text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Verified locally: smoke test, CDQN e2e sanity, QMIX eval logging, analyze_compare output.</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">08 / 10</text>
+  </g>
+</svg>

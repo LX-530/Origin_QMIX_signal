@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2563EB"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="74" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">论文启发：把组合动作拆成级联选择</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">Cascading DQN 的核心不是 GAN 用户模型，而是用 Q1 到 Qk 依次选择动作前缀。</text>
+  </g>
+  <g id="complexity-contrast">
+    <text x="86" y="184" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#475569">联合动作枚举</text>
+    <text x="86" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="46" font-weight="800" fill="#E11D48">4^24</text>
+    <text x="86" y="278" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">指数级，几乎不可直接搜索</text>
+    <text x="1020" y="184" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#475569">级联评估</text>
+    <text x="1020" y="238" font-family="Microsoft YaHei, Arial, sans-serif" font-size="46" font-weight="800" fill="#14B8A6">24×4</text>
+    <text x="1020" y="278" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">线性级，保留 mask 约束</text>
+  </g>
+  <g id="cascade-flow">
+    <line x1="230" y1="410" x2="1010" y2="410" stroke="#2563EB" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    <g id="step-q1">
+      <rect x="210" y="340" width="150" height="140" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="285" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A" text-anchor="middle">Q1</text>
+      <text x="285" y="420" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569" text-anchor="middle">输入 s</text>
+      <text x="285" y="450" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#2563EB" text-anchor="middle">选 a1</text>
+    </g>
+    <g id="step-q2">
+      <rect x="430" y="340" width="150" height="140" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="505" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A" text-anchor="middle">Q2</text>
+      <text x="505" y="420" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569" text-anchor="middle">输入 s, a1</text>
+      <text x="505" y="450" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#2563EB" text-anchor="middle">选 a2</text>
+    </g>
+    <g id="step-dots">
+      <text x="650" y="420" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#94A3B8" text-anchor="middle">...</text>
+    </g>
+    <g id="step-qk">
+      <rect x="720" y="340" width="150" height="140" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="795" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A" text-anchor="middle">Qk</text>
+      <text x="795" y="420" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569" text-anchor="middle">输入前缀</text>
+      <text x="795" y="450" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#2563EB" text-anchor="middle">选 ak</text>
+    </g>
+    <g id="step-joint">
+      <rect x="940" y="340" width="170" height="140" rx="8" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1.5"/>
+      <text x="1025" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A" text-anchor="middle">联合动作</text>
+      <text x="1025" y="420" font-family="Consolas, Courier New, monospace" font-size="17" fill="#475569" text-anchor="middle">(a1,...,ak)</text>
+      <text x="1025" y="450" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#14B8A6" text-anchor="middle">送入 CTM</text>
+    </g>
+  </g>
+  <g id="takeaway">
+    <rect x="176" y="555" width="928" height="64" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="210" y="594" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="800" fill="#0B1F3A">关键迁移：</text>
+    <text x="326" y="594" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827">每个信号仍各选自己的动作，动作编号允许重复；这不是原论文的无重复推荐列表。</text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Reference: Cascading DQN section + project action-mask constraint</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">04 / 10</text>
+  </g>
+</svg>

@@ -1,0 +1,1 @@
+网络设计遵守最小可行原则。状态先进入共享编码器，然后把 agent 位置 embedding 和前一个动作 embedding 送入 GRU 级联核心，最后用 Q head 输出当前信号四个动作的 Q 值。训练目标采用 Double DQN，用 online 网络选择下一步联合动作，用 target 网络估计目标值，并用 Huber loss 降低异常 TD 误差的影响。

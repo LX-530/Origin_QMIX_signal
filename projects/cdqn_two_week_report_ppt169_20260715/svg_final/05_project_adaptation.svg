@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC" />
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">本项目采用的是 CDQN-style autoregressive DQN</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">这是论文思想的工程化变体，不是论文算法在推荐系统场景下的原样复现。</text>
+  </g>
+  <g id="paper-column">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M64,164 H568 A8,8 0 0 1 576,172 V516 A8,8 0 0 1 568,524 H64 A8,8 0 0 1 56,516 V172 A8,8 0 0 1 64,164 Z" />
+    
+  <g transform="translate(86.0, 198.0) scale(1.4166666666666667)" fill="none" stroke="#2563EB" stroke-width="2">
+    <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
+    <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+    <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+    <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+    <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
+    <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+  </g>
+    <text x="136" y="223" font-family="Microsoft YaHei, Arial, sans-serif" font-size="23" font-weight="800" fill="#0B1F3A">论文中的 CDQN</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="86" y="286">任务：从候选物品中选出 k 个推荐项</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="86" y="324">约束：通常不希望重复选择同一物品</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="86" y="362">状态：用户状态与已选推荐前缀</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="86" y="400">重点：组合推荐动作的线性化搜索</text><path fill="#DBEAFE" d="M92,444 H528 A6,6 0 0 1 534,450 V484 A6,6 0 0 1 528,490 H92 A6,6 0 0 1 86,484 V450 A6,6 0 0 1 92,444 Z" />
+    <text x="310" y="474" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">适合推荐列表组合选择</text>
+  </g>
+  <g id="project-column">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M712,164 H1216 A8,8 0 0 1 1224,172 V516 A8,8 0 0 1 1216,524 H712 A8,8 0 0 1 704,516 V172 A8,8 0 0 1 712,164 Z" />
+    
+  <g transform="translate(734.0, 198.0) scale(1.4166666666666667)" fill="none" stroke="#14B8A6" stroke-width="2">
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M19 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4" />
+    <path d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5" />
+  </g>
+    <text x="784" y="223" font-family="Microsoft YaHei, Arial, sans-serif" font-size="23" font-weight="800" fill="#0B1F3A">本项目中的 CDQN 变体</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="734" y="286">任务：为每个信号智能体各选一个动作</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="734" y="324">约束：不同信号可以选择同一动作编号</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="734" y="362">状态：全局疏散状态 + 前缀动作信息</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827" x="734" y="400">重点：保留 action mask，减少联合搜索难度</text><path fill="#CCFBF1" d="M740,444 H1176 A6,6 0 0 1 1182,450 V484 A6,6 0 0 1 1176,490 H740 A6,6 0 0 1 734,484 V450 A6,6 0 0 1 740,444 Z" />
+    <text x="958" y="474" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#0F766E" text-anchor="middle">适合信号控制联合动作生成</text>
+  </g>
+  <g id="middle-definition">
+    <circle cx="640" cy="344" r="46" fill="#0B1F3A" />
+    <text x="640" y="337" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">不是</text>
+    <text x="640" y="361" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">照搬</text>
+    <line x1="576" y1="344" x2="704" y2="344" stroke="#0B1F3A" stroke-width="2" stroke-dasharray="8,4" />
+  </g>
+  <g id="bottom-takeaway">
+    <path fill="#0B1F3A" d="M164,566 H1116 A8,8 0 0 1 1124,574 V628 A8,8 0 0 1 1116,636 H164 A8,8 0 0 1 156,628 V574 A8,8 0 0 1 164,566 Z" />
+    <text x="640" y="596" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" text-anchor="middle">准确表述</text>
+    <text font-family="Consolas, Courier New, monospace" font-size="18" fill="#DBEAFE" text-anchor="middle" x="640" y="620">CDQN-style autoregressive DQN</text><text font-family="Consolas, Courier New, monospace" font-size="18" fill="#DBEAFE" text-anchor="middle" x="640" y="644">for masked joint signal actions</text></g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Design principle: adapt the cascade idea; do not claim exact paper reproduction.</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">05 / 10</text>
+  </g>
+</svg>

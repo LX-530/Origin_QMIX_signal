@@ -1,0 +1,1 @@
+工程上没有破坏原来的 QMIX 路径，而是新增 cascade_dqn 路径。新增文件包括级联网络、策略、transition replay buffer、单进程 runner、冒烟测试和对比脚本；原有入口只增加算法路由、参数 preset、reward_norm 开关和统一评估日志。这样后续可以在同一个仓库里并行比较原 QMIX、修正 QMIX 和 CDQN。

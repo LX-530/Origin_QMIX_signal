@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC" />
+  <g id="background-grid">
+    <line x1="760" y1="70" x2="1200" y2="70" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="760" y1="190" x2="1200" y2="190" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="760" y1="310" x2="1200" y2="310" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="760" y1="430" x2="1200" y2="430" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="760" y1="550" x2="1200" y2="550" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+  <g id="title-block">
+    <path fill="#2563EB" d="M64,88 H64 A6,6 0 0 1 70,94 V174 A6,6 0 0 1 64,180 H64 A6,6 0 0 1 58,174 V94 A6,6 0 0 1 64,88 Z" />
+    <text x="92" y="126" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#2563EB">两周成果汇报</text>
+    <text x="92" y="198" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="800" fill="#0B1F3A">级联 DQN 改造</text>
+    <text x="92" y="256" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">从 QMIX 审计到 CDQN 最小可运行版本</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" fill="#475569" x="92" y="320">目标不是立刻宣布替换 QMIX，而是形成可运行、可对比、可继续扩展的工程基线。</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="21" fill="#475569" x="92" y="354">本汇报只展示已验证事实；性能曲线等待服务器全量实验后替换。</text></g>
+  <g id="status-panel">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M768,118 H1172 A8,8 0 0 1 1180,126 V528 A8,8 0 0 1 1172,536 H768 A8,8 0 0 1 760,528 V126 A8,8 0 0 1 768,118 Z" />
+    <text x="790" y="160" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">当前状态</text>
+    <g id="status-1">
+      
+  <g transform="translate(790.0, 194.0) scale(1.1666666666666667)" fill="none" stroke="#14B8A6" stroke-width="2">
+    <path d="M5 12l5 5l10 -10" />
+  </g>
+      <text x="832" y="216" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">环境冒烟测试通过</text>
+      <text x="832" y="244" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">18 / 4 / 72 / 136 / 150，非法动作为 0</text>
+    </g>
+    <g id="status-2">
+      
+  <g transform="translate(790.0, 278.0) scale(1.1666666666666667)" fill="none" stroke="#2563EB" stroke-width="2">
+    <path d="M7 8l-4 4l4 4" />
+    <path d="M17 8l4 4l-4 4" />
+    <path d="M14 4l-4 16" />
+  </g>
+      <text x="832" y="300" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">CDQN 路径已接入</text>
+      <text x="832" y="328" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">network / policy / replay / runner / metrics</text>
+    </g>
+    <g id="status-3">
+      
+  <g transform="translate(790.0, 362.0) scale(1.1666666666666667)" fill="none" stroke="#2563EB" stroke-width="2">
+    <path d="M4 19l16 0" />
+    <path d="M4 15l4 -6l4 2l4 -5l4 4" />
+  </g>
+      <text x="832" y="384" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">小样训练可运行</text>
+      <text x="832" y="412" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">900 env steps，loss 从约 0.028 降至约 0.017</text>
+    </g>
+    <g id="status-4">
+      
+  <g transform="translate(790.0, 446.0) scale(1.1666666666666667)" fill="none" stroke="#E11D48" stroke-width="2">
+    <path d="M12 9v4" />
+    <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+    <path d="M12 16h.01" />
+  </g>
+      <text x="832" y="468" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">24 智能体定义仍需补齐</text>
+      <text x="832" y="496" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">当前仓库真实可见版本为 18 智能体</text>
+    </g>
+  </g>
+  <g id="footer">
+    <line x1="56" y1="650" x2="1224" y2="650" stroke="#CBD5E1" stroke-width="1" />
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">QMIX_signal_init · CDQN two-week report · 2026-07-15</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">01 / 10</text>
+  </g>
+</svg>

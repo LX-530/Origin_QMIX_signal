@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">代码改动集中在 7 个职责点</text>
+    <rect x="56" y="96" width="1168" height="46" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+    <text x="82" y="126" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#0B1F3A">核心原则：保留 QMIX 原路径，新建 cascade_dqn 路径，先能公平对比，再决定是否替换。</text>
+  </g>
+  <g id="new-files">
+    <rect x="56" y="174" width="548" height="300" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/git-branch" x="86" y="204" width="32" height="32" fill="#2563EB" stroke-width="2"/>
+    <text x="132" y="228" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">新增 CDQN 路径</text>
+    <text x="86" y="282" font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827">
+      <tspan x="86" dy="0">MARL/network/cascade_net.py</tspan>
+      <tspan x="86" dy="34">MARL/policy/cascade_dqn.py</tspan>
+      <tspan x="86" dy="34">MARL/common/transition_buffer.py</tspan>
+      <tspan x="86" dy="34">MARL/cascade_runner.py</tspan>
+      <tspan x="86" dy="34">tools/smoke_test.py</tspan>
+      <tspan x="86" dy="34">analyze_compare.py</tspan>
+    </text>
+  </g>
+  <g id="modified-files">
+    <rect x="676" y="174" width="548" height="300" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/settings" x="706" y="204" width="32" height="32" fill="#14B8A6" stroke-width="2"/>
+    <text x="752" y="228" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">修改原有入口与评估</text>
+    <text x="706" y="282" font-family="Consolas, Courier New, monospace" font-size="16" fill="#111827">
+      <tspan x="706" dy="0">MARL/common/arguments.py</tspan>
+      <tspan x="706" dy="34">main.py</tspan>
+      <tspan x="706" dy="34">env/environment.py</tspan>
+      <tspan x="706" dy="34">MARL/runner.py</tspan>
+      <tspan x="706" dy="34">MARL/common/rollout.py</tspan>
+      <tspan x="706" dy="34">README.md / AUDIT.md / PPT_STRUCTURE.md</tspan>
+    </text>
+  </g>
+  <g id="routing-code">
+    <rect x="156" y="516" width="968" height="106" rx="8" fill="#0B1F3A"/>
+    <text x="186" y="548" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">路由逻辑</text>
+    <text x="186" y="586" font-family="Consolas, Courier New, monospace" font-size="17" fill="#DBEAFE">
+      <tspan x="186" dy="0">if args.alg == "cascade_dqn": use CascadeRunner + transition replay</tspan>
+      <tspan x="186" dy="28">else: keep original Runner + episode replay + QMIX/VDN/other algorithms</tspan>
+    </text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Deliverable scope: additive implementation, no deletion of original QMIX path.</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">07 / 10</text>
+  </g>
+</svg>

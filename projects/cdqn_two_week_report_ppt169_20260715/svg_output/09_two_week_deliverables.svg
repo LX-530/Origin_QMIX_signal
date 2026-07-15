@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">两周工作量按成果交付，而不是按天数堆任务</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">最终汇报应围绕“可交付物 + 可验证结果 + 可替换实验页”组织。</text>
+  </g>
+  <g id="table">
+    <rect x="56" y="154" width="1168" height="430" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="56" y="154" width="1168" height="48" rx="8" fill="#0B1F3A"/>
+    <text x="86" y="185" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">成果</text>
+    <text x="474" y="185" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">当前状态</text>
+    <text x="692" y="185" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">可进入 PPT</text>
+    <text x="892" y="185" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">风险 / 下一步</text>
+    <g id="row1">
+      <line x1="56" y1="250" x2="1224" y2="250" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="232" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">环境与问题审计</text>
+      <text x="474" y="232" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">已完成</text>
+      <text x="692" y="232" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">维度表、风险表</text>
+      <text x="892" y="232" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">24 定义仍需外部补齐</text>
+    </g>
+    <g id="row2">
+      <line x1="56" y1="300" x2="1224" y2="300" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">修正版 QMIX 基线</text>
+      <text x="474" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">已接入 preset</text>
+      <text x="692" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">配置对比页</text>
+      <text x="892" y="282" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">全量训练应在服务器跑</text>
+    </g>
+    <g id="row3">
+      <line x1="56" y1="350" x2="1224" y2="350" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="332" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">CDQN 最小实现</text>
+      <text x="474" y="332" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">已跑通</text>
+      <text x="692" y="332" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">网络图、代码图</text>
+      <text x="892" y="332" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">后续需 5 seed 验证</text>
+    </g>
+    <g id="row4">
+      <line x1="56" y1="400" x2="1224" y2="400" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">奖励归一化与指标日志</text>
+      <text x="474" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">已提供开关</text>
+      <text x="692" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">公式与三分量</text>
+      <text x="892" y="382" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">权重需实验确认</text>
+    </g>
+    <g id="row5">
+      <line x1="56" y1="450" x2="1224" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="432" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">18 智能体本地小样</text>
+      <text x="474" y="432" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">已验证闭环</text>
+      <text x="692" y="432" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">只放事实，不放结论曲线</text>
+      <text x="892" y="432" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#E11D48">样本太少，不足以判断优劣</text>
+    </g>
+    <g id="row6">
+      <line x1="56" y1="500" x2="1224" y2="500" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="482" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">24 智能体扩展准备</text>
+      <text x="474" y="482" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#E11D48">待补齐定义</text>
+      <text x="692" y="482" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">缺失项说明页</text>
+      <text x="892" y="482" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">agent_cell_ids、mask、映射</text>
+    </g>
+    <g id="row7">
+      <text x="86" y="532" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827">最终汇报材料</text>
+      <text x="474" y="532" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#14B8A6">本 PPT 已生成</text>
+      <text x="692" y="532" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#111827">可直接替换结果页</text>
+      <text x="892" y="532" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">服务器曲线回填即可</text>
+    </g>
+  </g>
+  <g id="bottom-note">
+    <rect x="116" y="612" width="1048" height="44" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+    <text x="640" y="640" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#0B1F3A" text-anchor="middle">最小成功版本：18 智能体 CDQN 可运行 + 修正 QMIX 基线 + 可复现实验管线</text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Workload view: outcome-based, not day-by-day.</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">09 / 10</text>
+  </g>
+</svg>

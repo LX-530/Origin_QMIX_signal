@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">当前仓库审计：18 个智能体，两个训练高风险点</text>
+    <rect x="56" y="96" width="1168" height="48" rx="8" fill="#FFE4E6" stroke="#E11D48" stroke-width="1"/>
+    <use data-icon="tabler-outline/alert-triangle" x="76" y="107" width="26" height="26" fill="#E11D48" stroke-width="2"/>
+    <text x="114" y="127" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">不收敛不能直接归因于算法：现有代码与训练设置本身已经足以造成不稳定。</text>
+  </g>
+  <g id="dimension-table">
+    <rect x="56" y="178" width="540" height="382" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="86" y="218" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">环境真实维度</text>
+    <line x1="86" y1="244" x2="566" y2="244" stroke="#CBD5E1" stroke-width="1"/>
+    <g id="dim-rows" font-family="Microsoft YaHei, Arial, sans-serif">
+      <text x="86" y="282" font-size="16" fill="#475569">n_agents</text>
+      <text x="330" y="282" font-size="24" font-weight="800" fill="#2563EB">18</text>
+      <text x="408" y="282" font-size="15" fill="#475569">当前仓库真实可见版本</text>
+      <line x1="86" y1="306" x2="566" y2="306" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="344" font-size="16" fill="#475569">n_actions</text>
+      <text x="330" y="344" font-size="24" font-weight="800" fill="#2563EB">4</text>
+      <text x="408" y="344" font-size="15" fill="#475569">动作编号 0..3，必须 mask</text>
+      <line x1="86" y1="368" x2="566" y2="368" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="406" font-size="16" fill="#475569">state_shape</text>
+      <text x="330" y="406" font-size="24" font-weight="800" fill="#2563EB">72</text>
+      <text x="408" y="406" font-size="15" fill="#475569">总人数 + 71 个 cell 代价</text>
+      <line x1="86" y1="430" x2="566" y2="430" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="468" font-size="16" fill="#475569">obs_shape</text>
+      <text x="330" y="468" font-size="24" font-weight="800" fill="#2563EB">136</text>
+      <text x="408" y="468" font-size="15" fill="#475569">68 人数 + 68 火灾风险</text>
+      <line x1="86" y1="492" x2="566" y2="492" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="86" y="530" font-size="16" fill="#475569">episode_limit</text>
+      <text x="330" y="530" font-size="24" font-weight="800" fill="#2563EB">150</text>
+      <text x="408" y="530" font-size="15" fill="#475569">时间上限截断</text>
+    </g>
+  </g>
+  <g id="risk-table">
+    <rect x="636" y="178" width="588" height="382" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="666" y="218" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">训练配置风险</text>
+    <line x1="666" y1="244" x2="1194" y2="244" stroke="#CBD5E1" stroke-width="1"/>
+    <g id="risk-1">
+      <use data-icon="tabler-outline/alert-triangle" x="666" y="272" width="30" height="30" fill="#E11D48" stroke-width="2"/>
+      <text x="714" y="294" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#111827">epsilon 退火过快</text>
+      <text x="714" y="324" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">
+        <tspan x="714" dy="0">原配置 anneal_steps = 1，探索几乎一轮后降到 min_epsilon。</tspan>
+        <tspan x="714" dy="26">24 智能体下各自随机会放大联合动作噪声。</tspan>
+      </text>
+    </g>
+    <g id="risk-2">
+      <use data-icon="tabler-outline/alert-triangle" x="666" y="384" width="30" height="30" fill="#E11D48" stroke-width="2"/>
+      <text x="714" y="406" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#111827">更新 / 数据比过低</text>
+      <text x="714" y="436" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">
+        <tspan x="714" dy="0">每轮采集约 28×150 = 4200 个环境步，但只训练 1 次。</tspan>
+        <tspan x="714" dy="26">这会导致明显欠拟合，不应与算法本身混淆。</tspan>
+      </text>
+    </g>
+    <g id="risk-3">
+      <use data-icon="tabler-outline/alert-triangle" x="666" y="496" width="30" height="30" fill="#E11D48" stroke-width="2"/>
+      <text x="714" y="518" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#111827">24 智能体定义缺失</text>
+      <text x="714" y="548" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">需要补齐 agent_cell_ids、动作映射、mask 与影响 cell。</text>
+    </g>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Source: tools/smoke_test.py, env_info, AUDIT.md</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">03 / 10</text>
+  </g>
+</svg>

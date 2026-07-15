@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC" />
+  <g id="header">
+    <text x="56" y="78" font-family="Microsoft YaHei, Arial, sans-serif" font-size="42" font-weight="800" fill="#0B1F3A">下一步：补齐 24 智能体定义后做服务器全量对比</text>
+    <text x="56" y="120" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#475569">CDQN 已经具备继续验证的工程基础，但是否替换 QMIX 必须由同预算实验决定。</text>
+  </g>
+  <g id="decision-gates">
+    <path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M94,192 H418 A8,8 0 0 1 426,200 V444 A8,8 0 0 1 418,452 H94 A8,8 0 0 1 86,444 V200 A8,8 0 0 1 94,192 Z" />
+    
+  <g transform="translate(116.0, 224.0) scale(1.5833333333333333)" fill="none" stroke="#E11D48" stroke-width="2">
+    <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+  </g>
+    <text x="116" y="298" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A">Gate 1</text>
+    <text x="116" y="336" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">补齐 24 智能体定义</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="116" y="378">agent_cell_ids</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="116" y="406">动作映射与 mask</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="116" y="434">每个信号影响的 cell</text><path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M478,192 H802 A8,8 0 0 1 810,200 V444 A8,8 0 0 1 802,452 H478 A8,8 0 0 1 470,444 V200 A8,8 0 0 1 478,192 Z" />
+    
+  <g transform="translate(500.0, 224.0) scale(1.5833333333333333)" fill="none" stroke="#2563EB" stroke-width="2">
+    <path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -6" />
+    <path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -10" />
+    <path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -14" />
+    <path d="M4 20h14" />
+  </g>
+    <text x="500" y="298" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A">Gate 2</text>
+    <text x="500" y="336" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">同预算 5 seed 对比</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="500" y="378">原 QMIX</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="500" y="406">修正 QMIX</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="500" y="434">CDQN</text><path fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" d="M862,192 H1186 A8,8 0 0 1 1194,200 V444 A8,8 0 0 1 1186,452 H862 A8,8 0 0 1 854,444 V200 A8,8 0 0 1 862,192 Z" />
+    
+  <g transform="translate(884.0, 224.0) scale(1.5833333333333333)" fill="none" stroke="#14B8A6" stroke-width="2">
+    <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    <path d="M7 12a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  </g>
+    <text x="884" y="298" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#0B1F3A">Gate 3</text>
+    <text x="884" y="336" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">按指标决定是否替换</text>
+    <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="884" y="378">完成率不差</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="884" y="406">疏散步数更短</text><text font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#475569" x="884" y="434">火灾暴露不恶化</text></g>
+  <g id="final-callout">
+    <path fill="#0B1F3A" d="M124,500 H1156 A8,8 0 0 1 1164,508 V566 A8,8 0 0 1 1156,574 H124 A8,8 0 0 1 116,566 V508 A8,8 0 0 1 124,500 Z" />
+    <text x="640" y="532" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">当前结论</text>
+    <text x="640" y="562" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#DBEAFE" text-anchor="middle">CDQN 值得进入 24 智能体验证，但还不能宣称优于修正 QMIX。</text>
+  </g>
+  <g id="next-command">
+    <text x="156" y="626" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="800" fill="#0B1F3A">服务器实验命令骨架</text>
+    <text x="156" y="655" font-family="Consolas, Courier New, monospace" font-size="16" fill="#475569">python main.py --alg cascade_dqn --reward_norm --preset qmix_fixed</text>
+  </g>
+  <g id="footer">
+    <text x="56" y="692" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Decision rule: keep the corrected QMIX baseline until CDQN wins on comparable multi-seed evidence.</text>
+    <text x="1224" y="692" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">10 / 10</text>
+  </g>
+</svg>

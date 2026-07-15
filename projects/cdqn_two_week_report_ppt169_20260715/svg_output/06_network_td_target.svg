@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="70" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">最小网络：共享编码器 + GRU 级联 + Double DQN</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">先做可训练、可比较的最小版本，不为 24 个信号建立 24 套独立网络。</text>
+  </g>
+  <g id="architecture">
+    <rect x="56" y="154" width="760" height="390" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <g id="layer-state">
+      <rect x="90" y="196" width="690" height="72" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+      <use data-icon="tabler-outline/database" x="114" y="214" width="34" height="34" fill="#2563EB" stroke-width="2"/>
+      <text x="164" y="226" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#0B1F3A">State Encoder</text>
+      <text x="164" y="252" font-family="Consolas, Courier New, monospace" font-size="16" fill="#475569">state_dim → 128 → 128, ReLU + LayerNorm</text>
+    </g>
+    <g id="layer-prefix">
+      <rect x="90" y="300" width="690" height="72" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+      <use data-icon="tabler-outline/users" x="114" y="318" width="34" height="34" fill="#2563EB" stroke-width="2"/>
+      <text x="164" y="330" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#0B1F3A">Agent + Action Embedding</text>
+      <text x="164" y="356" font-family="Consolas, Courier New, monospace" font-size="16" fill="#475569">agent_id embedding 16, previous action embedding 16</text>
+    </g>
+    <g id="layer-core">
+      <rect x="90" y="404" width="690" height="72" rx="8" fill="#CCFBF1" stroke="#14B8A6" stroke-width="1.2"/>
+      <use data-icon="tabler-outline/network" x="114" y="422" width="34" height="34" fill="#14B8A6" stroke-width="2"/>
+      <text x="164" y="434" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="800" fill="#0B1F3A">Cascade Core + Q Head</text>
+      <text x="164" y="460" font-family="Consolas, Courier New, monospace" font-size="16" fill="#475569">GRUCell hidden=128, Q head: 128 → 64 → 4, mask illegal actions</text>
+    </g>
+  </g>
+  <g id="target-box">
+    <rect x="856" y="154" width="368" height="390" rx="8" fill="#0B1F3A"/>
+    <text x="890" y="202" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Double DQN 目标</text>
+    <text x="890" y="254" font-family="Consolas, Courier New, monospace" font-size="17" fill="#DBEAFE">
+      <tspan x="890" dy="0">a_next = CascadeArgmax</tspan>
+      <tspan x="890" dy="28">(Q_online, s_next)</tspan>
+      <tspan x="890" dy="44">y = r + gamma · (1-done)</tspan>
+      <tspan x="890" dy="28">· Q_target(s_next, a_next)</tspan>
+      <tspan x="890" dy="44">loss = mean Huber</tspan>
+      <tspan x="890" dy="28">(Q_online(s, prefix), y)</tspan>
+    </text>
+    <rect x="890" y="462" width="296" height="48" rx="6" fill="#DBEAFE"/>
+    <text x="1038" y="493" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="800" fill="#0B1F3A" text-anchor="middle">所有级联位置共享同一 TD target</text>
+  </g>
+  <g id="hyperparams">
+    <rect x="118" y="584" width="1044" height="60" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="146" y="621" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800" fill="#0B1F3A">初始超参：</text>
+    <text x="252" y="621" font-family="Consolas, Courier New, monospace" font-size="17" fill="#475569">Adam · lr=1e-4 · gamma=0.99 · batch=256 · replay=100000 · warmup=5000 · target=1000 · clip=10</text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Source: MARL/network/cascade_net.py, MARL/policy/cascade_dqn.py</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">06 / 10</text>
+  </g>
+</svg>

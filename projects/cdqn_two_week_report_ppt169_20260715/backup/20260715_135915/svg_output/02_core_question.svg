@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect x="0" y="0" width="1280" height="720" fill="#F8FAFC"/>
+  <g id="header">
+    <text x="56" y="74" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="800" fill="#0B1F3A">要解决的不是“换算法”这么简单</text>
+    <text x="56" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#475569">先把系统事实讲清楚，再判断 CDQN 是否值得推进到 24 智能体。</text>
+  </g>
+  <g id="scqa-line">
+    <line x1="98" y1="210" x2="850" y2="210" stroke="#CBD5E1" stroke-width="3"/>
+    <circle cx="128" cy="210" r="18" fill="#2563EB"/>
+    <circle cx="426" cy="210" r="18" fill="#E11D48"/>
+    <circle cx="724" cy="210" r="18" fill="#14B8A6"/>
+    <text x="128" y="216" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">S</text>
+    <text x="426" y="216" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">C</text>
+    <text x="724" y="216" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">A</text>
+  </g>
+  <g id="scqa-text">
+    <text x="98" y="278" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">Situation</text>
+    <text x="98" y="314" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" fill="#111827">
+      <tspan x="98" dy="0">加入更多信号智能体后，QMIX 在 24 智能体设定下表现为不收敛。</tspan>
+      <tspan x="98" dy="32">直觉上，联合动作空间增大，集中式混合网络更难稳定学习。</tspan>
+    </text>
+    <text x="98" y="412" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">Complication</text>
+    <text x="98" y="448" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" fill="#111827">
+      <tspan x="98" dy="0">当前仓库实际可见版本是 18 智能体，不是完整 24 智能体。</tspan>
+      <tspan x="98" dy="32">同时存在 epsilon 退火过快、训练更新不足两个高风险配置问题。</tspan>
+    </text>
+    <text x="98" y="546" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1F3A">Answer</text>
+    <text x="98" y="582" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" fill="#111827">
+      <tspan x="98" dy="0">本阶段先交付：修正 QMIX 基线 + CDQN 最小可运行实现 + 可复现实验接口。</tspan>
+    </text>
+  </g>
+  <g id="decision-box">
+    <rect x="916" y="178" width="284" height="360" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/target" x="950" y="216" width="42" height="42" fill="#2563EB" stroke-width="2"/>
+    <text x="950" y="296" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="800" fill="#0B1F3A">本阶段判断</text>
+    <text x="950" y="344" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#111827">
+      <tspan x="950" dy="0">不能用小样曲线证明</tspan>
+      <tspan x="950" dy="30">“CDQN 更优”。</tspan>
+      <tspan x="950" dy="52">但可以证明：</tspan>
+    </text>
+    <text x="950" y="444" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#2563EB">
+      <tspan x="950" dy="0">路径已跑通</tspan>
+      <tspan x="950" dy="30">非法动作被 mask</tspan>
+      <tspan x="950" dy="30">指标可对齐比较</tspan>
+    </text>
+  </g>
+  <g id="footer">
+    <text x="56" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8">Source: Claude implementation log + local repository audit</text>
+    <text x="1224" y="682" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#94A3B8" text-anchor="end">02 / 10</text>
+  </g>
+</svg>
